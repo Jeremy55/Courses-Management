@@ -5,15 +5,16 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.util.Set;
+import javax.persistence.OneToOne;
 
 @Data
 @Entity
-public class Student extends User {
+public class Homework {
     @Id
     @Column(name = "id", nullable = false)
     private Long id;
-    @OneToMany
-    private Set<Work> works;
+    private String deadline;
+    private String label;
+    @OneToOne(optional = true)
+    private Work work;
 }
