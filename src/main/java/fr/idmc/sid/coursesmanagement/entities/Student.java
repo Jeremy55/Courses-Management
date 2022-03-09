@@ -2,10 +2,7 @@ package fr.idmc.sid.coursesmanagement.entities;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 @Data
@@ -16,4 +13,6 @@ public class Student extends User {
     private Long id;
     @OneToMany
     private Set<Work> works;
+    @ManyToMany
+    private Set<Course> courses;
 }
