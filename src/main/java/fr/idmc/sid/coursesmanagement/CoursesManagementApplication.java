@@ -11,13 +11,6 @@ public class CoursesManagementApplication {
     public static void main(String[] args) {
         SpringApplication.run(CoursesManagementApplication.class, args);
     }
-
-    @Bean
-    CommandLineRunner run() {
-        return args -> {
-        };
-    }
-
     /**
      * Given that I'm a student
      * When I am logged

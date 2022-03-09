@@ -11,9 +11,6 @@ import java.util.Set;
 @Getter
 @Setter
 public class Student extends User {
-    @Id
-    @Column(name = "id", nullable = false)
-    private Long id;
     @OneToMany
     private Set<Work> works;
     @ManyToMany

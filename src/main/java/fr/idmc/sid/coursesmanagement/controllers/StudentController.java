@@ -14,7 +14,7 @@ public class StudentController {
 
     private StudentService studentService;
 
-    @GetMapping
+    @GetMapping("/courses")
     public ResponseEntity<?> getAll(){
         return new ResponseEntity<>("test", HttpStatus.OK);
     }
