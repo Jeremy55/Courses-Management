@@ -1,6 +1,6 @@
 package fr.idmc.sid.coursesmanagement.controllers;
 
-import fr.idmc.sid.coursesmanagement.services.ClassesServices;
+import fr.idmc.sid.coursesmanagement.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ClassController {
 
     @Autowired
-    private ClassesServices classesServices;
+    private StudentService classesServices;
 
     @GetMapping
     public ResponseEntity<?> getAll(){

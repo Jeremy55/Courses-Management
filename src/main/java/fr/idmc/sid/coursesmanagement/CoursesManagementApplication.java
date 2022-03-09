@@ -1,9 +1,5 @@
 package fr.idmc.sid.coursesmanagement;
 
-import fr.idmc.sid.coursesmanagement.repositories.ProfessorsRepository;
-import fr.idmc.sid.coursesmanagement.repositories.RoomsRepository;
-import fr.idmc.sid.coursesmanagement.repositories.StudentsRepository;
-import fr.idmc.sid.coursesmanagement.services.ClassesServices;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,7 +13,7 @@ public class CoursesManagementApplication {
     }
 
     @Bean
-    CommandLineRunner run(ClassesServices classesServices, ProfessorsRepository professorsRepository, RoomsRepository roomsRepository, StudentsRepository studentsRepository) {
+    CommandLineRunner run() {
         return args -> {
         };
     }
