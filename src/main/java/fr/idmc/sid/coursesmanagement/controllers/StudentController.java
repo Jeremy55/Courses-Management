@@ -9,14 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("classes")
-public class ClassController {
+@RequestMapping("students")
+public class StudentController {
 
-    @Autowired
-    private StudentService classesServices;
+    private StudentService studentService;
 
     @GetMapping
     public ResponseEntity<?> getAll(){
-        return new ResponseEntity<>(classesServices.getAll(), HttpStatus.OK);
+        return new ResponseEntity<>("test", HttpStatus.OK);
     }
 }
