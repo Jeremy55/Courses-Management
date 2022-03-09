@@ -26,34 +26,17 @@ public class CoursesManagementApplication {
     @Bean
     CommandLineRunner run(ClassesServices classesServices, ProfessorsRepository professorsRepository, RoomsRepository roomsRepository, StudentsRepository studentsRepository) {
         return args -> {
-            Class class1 = new Class();
-            class1.setName("Class_test");
-            Professor professor = new Professor();
-            professor.setName("Prof_test");
-            List<Professor> professorList = new ArrayList<>();
-            professorList.add(professor);
-            Student student = new Student();
-            student.setName("Student_test");
-            List<Student> students = new ArrayList<>();
-            students.add(student);
-            Room room =  new Room();
-            room.setCapacity(30);
-            room.setNumber(227);
-            room.setFloor(1);
-
-            class1.setProfessors(professorList);
-            class1.setStudents(students);
-            class1.setRoom(room);
-            class1.setId(1L);
-            professor.setId(1L);
-            room.setId(1L);
-            student.setId(1L);
-            professorsRepository.save(professor);
-            roomsRepository.save(room);
-            studentsRepository.save(student);
-            classesServices.save(class1);
         };
     }
+
+    /**
+     * Given that I'm a student
+     * When I am logged
+     * And I click on a specific course
+     * Then I'll see the potential homework renders for this course
+     * And I can give my homework
+     */
+
     /**
      * Given that I'm a student registered in the system
      * When I open the courses page
