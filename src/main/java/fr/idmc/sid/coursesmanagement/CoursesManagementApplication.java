@@ -1,9 +1,5 @@
 package fr.idmc.sid.coursesmanagement;
 
-import fr.idmc.sid.coursesmanagement.entities.Class;
-import fr.idmc.sid.coursesmanagement.entities.Professor;
-import fr.idmc.sid.coursesmanagement.entities.Room;
-import fr.idmc.sid.coursesmanagement.entities.Student;
 import fr.idmc.sid.coursesmanagement.repositories.ProfessorsRepository;
 import fr.idmc.sid.coursesmanagement.repositories.RoomsRepository;
 import fr.idmc.sid.coursesmanagement.repositories.StudentsRepository;
@@ -12,9 +8,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootApplication
 public class CoursesManagementApplication {

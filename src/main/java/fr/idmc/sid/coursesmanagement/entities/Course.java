@@ -3,19 +3,18 @@ package fr.idmc.sid.coursesmanagement.entities;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Collection;
+import java.util.Set;
 
 @Data
 @Entity
-public class Class {
+public class Course {
     @Id
     @Column(name = "id", nullable = false)
     private Long id;
-    private String name;
+    private String subject;
+    private String label;
     @ManyToOne
-    private Room room;
+    private Teacher teacher;
     @ManyToMany
-    private Collection<Professor> professors;
-    @ManyToMany
-    private Collection<Student> students;
+    private Set<Student> student;
 }

@@ -8,12 +8,8 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-public class Student extends Person{
+public class Student extends User {
     @Id
     @Column(name = "id", nullable = false)
     private Long id;
-
-    public void followClass(){
-        return;
-    }
 }

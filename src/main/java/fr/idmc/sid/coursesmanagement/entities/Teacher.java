@@ -5,20 +5,11 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import java.util.List;
 
 @Data
 @Entity
-public class Room {
+public class Teacher extends User {
     @Id
     @Column(name = "id", nullable = false)
     private Long id;
-
-    private  int number;
-    private int floor;
-    private int capacity;
-    public void bookRoom(int number){
-        return;
-    }
 }
